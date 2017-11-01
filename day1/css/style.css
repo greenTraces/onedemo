@@ -1,0 +1,172 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration:none;
+    box-sizing: border-box;
+}
+html,body{
+    width:100%;
+    height:100%;
+    -webkit-user-select:none;
+    user-select:none;
+    font-size:62.5%;
+    outline: none;
+}
+.wrap{
+    width:100%;
+    height:100%;
+    background: #FFCCFF;
+    overflow: hidden;
+}
+.wrap section{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+     overflow-y: scroll; 
+}
+section .title{
+    width:100%;
+    position: relative;
+}
+section .title>img{
+    width:100%;
+}
+section .title>p{
+   position: absolute;
+   top:17rem;
+   left:3rem; 
+   font-size:1.6rem;
+   
+}
+section .title>.p2{
+    top:17rem;
+   left:11rem; 
+}
+section .title>.p3{
+    top:17rem;
+   left:20rem; 
+}
+section .title>#time{
+    top:20.5rem;
+   left:7rem; 
+   font-size:1.0rem;
+   display: flex;
+   color:#fff;
+}
+section .title>p>span{
+    display: block;
+    color:#fff;
+}
+section .title>p>b{
+    color:#FF9900;
+    margin-left:0.3rem;
+}
+section .title>label{
+    width:18rem;
+    height:2.5rem;
+    background: #fff;
+    position: absolute;
+    top:24rem;
+    left:4rem;
+    
+}
+section .title>label>input{
+    width:15rem;
+    height:2.3rem;
+    position: absolute;
+    top:0;
+    left:0;
+    border:none;
+    outline: none;
+}
+section .title>label>img{
+    width:2rem;
+    height:auto;
+    position: absolute;
+    top:0.2rem;
+    right:0.5rem;
+}
+section .content{
+    width:100%;
+}
+section .content>p{
+     width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding:1rem 1rem;
+
+}
+section .content>p>button{
+    width:25%;
+    height:2.6rem;
+    border-radius: 2rem;
+    border:none;
+    outline: none;
+    color:#fff;
+    background: #33CCFF;
+}
+section .content>p>button.on{
+    background: #358994;
+}
+section .content>.dl{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+section .content>.dl>dl{
+    width:50%;
+}
+section .content>.dl>dl>dt{
+    width:100%;
+    position: relative;
+}
+section .content>.dl>dl>dt>em{
+    position: absolute;
+    display: block;
+    padding:0.3rem 0.8rem;
+    background: #FF9966;
+    top:0;
+    left:0;
+    color:#fff;
+}
+section .content>.dl>dl>dt>img{
+    width:100%;
+}
+section .content>.dl>dl>dd{
+    width:100%;
+    color:#fff;
+    display: flex;
+}
+section .content>.dl>dl>dd>p{
+    width:80%;
+    height:3rem;
+    background: #FF9966;
+}
+section .content>.dl>dl>dd>p>span{
+    display: block;
+}
+section .content>.dl>dl>dd>a{
+    display: inline-block;
+    background: red;
+    width:20%;
+    height:3rem;
+    line-height: 3rem;
+    text-align: center;
+}
+section>footer{
+    width:100%;
+}
+section>footer>p{
+   text-align: center;
+   margin-top:1rem;
+}
+section>footer>p>a{
+    display: inline-block;
+    width:2rem;
+    height:2rem;
+    border-radius: 50%;
+    border:1px solid #358994;
+     text-align: center;
+     line-height: 2rem;
+}

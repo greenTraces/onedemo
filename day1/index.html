@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <script>
+        document.documentElement.style.fontSize=window.innerWidth/375*50+'px'
+    </script> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <section>
+            <div class="title">
+                <img src="img/index_top.png">
+                <p><span>已报名</span><b>126</b></p>
+                <p class="p2"><span>投票人数</span><b>1565</b></p>
+                <p class="p3"><span>浏览量</span><b>1260</b></p>
+                <p id="time">倒计时:<span>5天12时45分15秒</span></p>
+                <label><input type="text"><img src="img/index_search.png"></label>
+            </div>
+            <div class="content">
+                <p><button class="on">每日推荐</button><button>投票排行</button><button>Top 300</button></p>
+                <div class="dl"></div>
+            </div>
+            <footer>
+                <p><a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a><p>
+            </footer>
+        </section>
+    </div>
+    <script src="js/jquery-1.8.3.min.js"></script>
+      <script src="js/data.js"></script>
+    <script>
+        $(".content button").on("click",function(){
+            $(this).addClass("on").siblings().removeClass("on");
+        })
+        var str="";
+        data.forEach(function(file,i){
+            str+=`<dl>
+                    <dt><img src="${file.imgs}"><em>${file.em}</em></dt>
+                    <dd>
+                        <p><span>${file.span}</span><b>${file.b}</b></p>
+                        <a>${file.a}</a>
+                    </dd>
+                </dl>`
+        })
+        $(".dl").html(str);
+        
+        setInterval(function(){
+            var data=new Date();
+            var newdata=new Date(2017,10,6);
+            var d=Math.abs(data-newdata);
+            var t=parseInt(d/(24*60*60*1000));
+            var s=parseInt(d%(24*60*60*1000)/3600000);
+            var m=parseInt(d%(24*60*60*1000)%3600000/60000);
+            var miao=parseInt(d%(24*60*60*1000)%3600000%60000/1000);
+            $("#time span").html(""+t+"天"+s+"时"+m+"分"+miao+"秒")
+        },1000)
+    </script>
+</body>
+</html>
